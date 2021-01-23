@@ -1,3 +1,7 @@
+/* BOJ - 1157 : 단어 공부
+   22.January.2021
+ */
+
 import java.util.Scanner;
 
 public class Main {
@@ -10,7 +14,7 @@ public class Main {
         int max = 0; // max count of same alphabet
         for(char c : s.toCharArray()) {
             int cnt = ++alpha[c - 'A']; // to compare max & count of current alphabet
-            max = (max < cnt ? cnt : max);
+            max = (Math.max(max, cnt));
         }
         int idx = -1; // to check if max count appears once ()
         int check = 0;

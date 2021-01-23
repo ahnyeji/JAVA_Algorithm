@@ -1,3 +1,7 @@
+/* BOJ - 10809 : 알파벳 찾기
+   22.January.2021
+ */
+
 import java.util.Arrays;
 import java.util.Scanner;
 

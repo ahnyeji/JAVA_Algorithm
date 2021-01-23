@@ -14,8 +14,8 @@ public class Main {
             R = sc.nextInt();
             S = sc.next();
             String P = ""; // Result after Repetition
-            for(char s : S.toCharArray()) {
-                for(int j = 0; j < R; j++){
+            for(char s : S.toCharArray()) { // each alphabet
+                for(int j = 0; j < R; j++){ // R times
                     P += s;
                 }
             }
