@@ -34,25 +34,27 @@ public class Main {
     }
 }
 
-//// Loop version -> 14732KB & 160ms
-//public class Main {
-//    // check self number -> 0 if not self number
-//    static int[] notSelf = new int[10001];
-//
-//    public static void main(String[] args) {
-//        for(int i = 1; i < 10001; i++){
-//            if(notSelf[i] == 0){
-//                System.out.println(i);
-//            }
-//            int n = i;
-//            int nextN = n;
-//            while(n > 0) {
-//                nextN += n % 10;
-//                n /= 10;
-//            }
-//            if(nextN < 10001){
-//                notSelf[nextN]++;
-//            }
-//        }
-//    }
-//}
+/*
+// Loop version -> 14732KB & 160ms
+public class Main {
+    // check self number -> 0 if not self number
+    static int[] notSelf = new int[10001];
+
+    public static void main(String[] args) {
+        for(int i = 1; i < 10001; i++){
+            if(notSelf[i] == 0){
+                System.out.println(i);
+            }
+            int n = i;
+            int nextN = n;
+            while(n > 0) {
+                nextN += n % 10;
+                n /= 10;
+            }
+            if(nextN < 10001){
+                notSelf[nextN]++;
+            }
+        }
+    }
+}
+*/
