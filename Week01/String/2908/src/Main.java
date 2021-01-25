@@ -12,7 +12,7 @@ public class Main {
         b = sc.next();
         int aa = 0;
         int bb = 0;
-        for(int i = 2; i >= 0; i--){
+        for (int i = 2; i >= 0; i--) {
             aa *= 10;
             bb *= 10;
             aa += (a.charAt(i) - '0');
