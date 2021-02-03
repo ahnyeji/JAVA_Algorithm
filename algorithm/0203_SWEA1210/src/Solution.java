@@ -23,10 +23,13 @@ public class Solution {
             }
 
             while(endR > 0) {
+                // 1. go up once
                 ladder[endR--][endC] = -1;
+                // 2. go left until meet 0
                 while(endC > 0 && ladder[endR][endC - 1] == 1) {
                     ladder[endR][endC--] = -1;
                 }
+                // 3. go right until meet 0
                 while(endC < 99 && ladder[endR][endC + 1] == 1) {
                     ladder[endR][endC++] = -1;
                 }
