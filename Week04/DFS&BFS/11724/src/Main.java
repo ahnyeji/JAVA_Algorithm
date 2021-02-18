@@ -36,7 +36,9 @@ public class Main {
 
         for(int i = 1; i <= N; i++){
             if(!visit[i]){
-                bfs(i);
+//                bfs(i);
+                dfs(i);
+                cnt++;
             }
         }
         System.out.println(cnt);
@@ -53,10 +55,19 @@ public class Main {
             for(int n : graph[node]){
                 if(!visit[n]){
                     visit[n] = true;
-                    q.offer(n);
+                    q.offer(n); // check same level first
                 }
             }
         }
         cnt++;
+    }
+
+    static void dfs(int idx){ // find connected component using dfs
+        visit[idx] = true;
+        for(int n : graph[idx]){
+            if(!visit[n]){
+                dfs(n); // check child first
+            }
+        }
     }
 }
