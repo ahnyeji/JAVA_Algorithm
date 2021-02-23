@@ -1,11 +1,11 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
 
         int N = Integer.parseInt(in.readLine());
 
@@ -26,15 +26,16 @@ public class Main {
             }
         }
 
-        int cnt;
-        for(int idx = 1; idx <= N; idx++){ // get paper area
-            cnt = 0;
-            for(int i = 0; i < 101; i++){
-                for(int j = 0; j < 101; j++){
-                    if(board[i][j] == idx) cnt++;
-                }
+        int[] cnt = new int[N + 1];
+        for(int i = 0; i < 101; i++){ // get paper area
+            for(int j = 0; j < 101; j++){
+                cnt[board[i][j]]++;
             }
-            sb.append(cnt).append("\n");
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for(int i = 1; i <= N; i++){
+            sb.append(cnt[i]).append("\n");
         }
         System.out.println(sb);
     }
