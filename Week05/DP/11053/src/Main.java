@@ -1,6 +1,4 @@
 /*  [DP]
-    # 기저사례
-      - dp[0] : 1 (이 원소부터 시작하는 증가 수열)
     # 점화식
       - dp[i] = max(dp[j]) + 1 (dp[j] : seq[i] > seq[j]인 원소)
 */
@@ -17,12 +15,8 @@ public class Main {
         int[] dp = new int[N]; // save result of dynamic programming
 
         StringTokenizer st = new StringTokenizer(in.readLine());
-        // base case
-        seq[0] = Integer.parseInt(st.nextToken());
-        dp[0] = 1;
-
         int maxi = 1; // should be 1 (not 0) because of N == 1 case
-        for(int i = 1; i < N; i++){
+        for(int i = 0; i < N; i++){
             seq[i] = Integer.parseInt(st.nextToken()); // sequence input
             for(int j = i - 1; j > -1; j--){ // check ascending maximum length contain this element
                 if(seq[i] > seq[j]) // ascending
