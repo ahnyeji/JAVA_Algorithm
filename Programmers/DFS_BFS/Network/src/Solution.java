@@ -5,7 +5,6 @@ class Solution {
     public int solution(int n, int[][] computers) {
         p = new int[n + 1];
         for(int i = 1; i <= n; i++) p[i] = i;
-        int len = computers.length;
         for(int i = 0; i < n; i++) {
             for(int j = i + 1; j < n; j++) {
                 if(computers[i][j] == 0) continue;
